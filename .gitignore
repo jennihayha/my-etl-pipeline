@@ -5,6 +5,3 @@ data
 .env
 __pycache__/
 .idea/
-sarah-code
-notebooks
-slides
