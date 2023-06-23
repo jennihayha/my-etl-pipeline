@@ -31,4 +31,3 @@ Make sure you are executing the code from the etl_pipeline folder and that you h
 
     `docker run --env-file .env etl-pipeline`
 
-
