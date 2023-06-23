@@ -3,7 +3,7 @@
 This repository contains an ETL (_extract, transform, load_) pipeline that performs following tasks:
 
 - extracting transactional data of ca. 400k invoices from Redshift
-- transforming the data: identifying and removing duplicates, changing the data type of the invoice_date field to type datetime  
+- transforming the data: identifying and removing duplicates, changing the invoice_date field into datetime format
 - loading the transformed data to an s3 bucket
 
 ## Requirements
@@ -18,9 +18,15 @@ The minimum requirements for running the code are as follows:
 
 ## Instructions on how to run the code
 
+Copy the .env.example file to .env and fill out the environment variables.
 
+Make sure you are executing the code from the etl_pipeline folder and that you have Docker Desktop running.
 
+ 1. To run it locally, first build the image:
 
+    `docker image build -t etl-pipeline .`
 
+ 2. Then run the etl job using Docker:
 
+    `docker run --env-file .env etl-pipeline`
 
